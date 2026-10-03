@@ -1,0 +1,8 @@
+# Shared repo settings. Keep model choice and credentials in user configuration.
+sandbox_mode = "workspace-write"
+approval_policy = "on-request"
+
+# Optional: install codebase-memory-mcp, then uncomment this registration.
+# Also set code_graph.project in agent-base.json to the actual indexed project.
+# [mcp_servers.codebase-memory-mcp]
+# command = "codebase-memory-mcp"

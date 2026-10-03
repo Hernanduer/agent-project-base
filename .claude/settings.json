@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Bash",
+        "hooks": [{"type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/hooks/read_gate.py\"", "timeout": 5}]
+      },
+      {
+        "matcher": "Agent|Task|Workflow",
+        "hooks": [{"type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/hooks/no_nested_agents.py\"", "timeout": 5}]
+      }
+    ]
+  }
+}

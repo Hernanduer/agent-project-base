@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "project": "agent-project-base",
+  "base_branch": "main",
+  "max_worktrees": 3,
+  "required_tools": [],
+  "code_graph": {"project": null, "required": false},
+  "checks": {"quick": [], "full": []}
+}

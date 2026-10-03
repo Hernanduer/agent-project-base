@@ -1,0 +1,14 @@
+image: python:3.11
+stages: [check]
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS'
+      when: never
+    - if: '$CI_COMMIT_BRANCH'
+check:
+  stage: check
+  # Install the application's pinned toolchain and dependencies here.
+  # Once application checks are configured, add --require-project.
+  script:
+    - bash tools/ci.sh quick

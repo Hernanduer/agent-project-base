@@ -1,0 +1,15 @@
+/build/
+/dist/
+/target/
+**/node_modules/
+**/__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+.codex/*.local.toml
+*.log
+.DS_Store
+.idea/
