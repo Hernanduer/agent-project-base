@@ -1,6 +1,6 @@
 # Agent project base
 
-A small foundation for projects developed with Codex and Claude Code. It extracts the shared working practices from Transporter and related repositories into portable instructions, tested utilities, and optional workflow guides. It has no application framework or game engine dependency.
+A small foundation for projects developed with Codex and Claude Code. It extracts the shared working practices from prior projects into portable instructions, tested utilities, and optional workflow guides. It has no application framework or game engine dependency.
 
 Requires Python 3.10+, Bash, and Git. Local worktree merge locking requires Linux, macOS, or WSL. No Python packages are needed for the supplied tooling.
 
