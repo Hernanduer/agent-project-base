@@ -29,6 +29,10 @@ With concurrent work, use a separate worktree and define owner paths. Preserve o
 
 The main session may delegate when appropriate and authorized. Workers do their own assigned work and return a handoff if it exceeds their scope; they do not launch nested agents. Each brief states responsibilities and concurrent work. Model choice stays in user configuration.
 
+## Commit messages
+
+Do not add `Claude-Session` URLs, AI `Co-authored-by` trailers, or generated-by taglines to commit messages. Use a normal summary and relevant body. Preserve attribution to human contributors when appropriate.
+
 ## Verification and completion
 
 Run checks relevant to the change and the configured completion gate. Prefer tests of observable behavior and meaningful invariants. Use isolated paths, ports, and mutable data. Keep timing benchmarks separate from correctness checks on busy machines.

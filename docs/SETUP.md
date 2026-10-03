@@ -31,6 +31,8 @@ Codex reads `AGENTS.md`; `CLAUDE.md` imports that same file. Keep shared rules t
 
 The committed `.codex/config.toml` sets workspace-write sandboxing and on-request approvals. Project configuration requires the client's project trust. The committed `.claude/settings.json` registers two portable hooks using `CLAUDE_PROJECT_DIR`: a large-read context guard and a nested-delegation guard. Personal overrides stay in ignored `.claude/settings.local.json`. See the official [Codex configuration](https://learn.chatgpt.com/docs/config-file/config-basic), [Claude settings](https://code.claude.com/docs/en/settings), and [hook reference](https://code.claude.com/docs/en/hooks).
 
+Commit attribution is disabled in the shared Claude settings (`attribution.commit` is empty and `attribution.sessionUrl` is false). AGENTS.md also tells both clients to omit AI co-author trailers, session URLs, and generated-by taglines. New projects inherit this preference.
+
 Skills are maintained in `.agents/skills/` and mirrored as regular files in `.claude/skills/`. After editing a skill, run `python3 tools/sync_skills.py`; CI checks for drift. Avoiding symlinks makes copies and Git checkouts work without symlink privileges. To remove a skill, remove both copies. These simple skills have no supporting assets; extend the sync tool if you add them. Discovery locations: [Codex skills](https://learn.chatgpt.com/docs/build-skills), [Claude skills](https://code.claude.com/docs/en/skills).
 
 ## Optional code graph
